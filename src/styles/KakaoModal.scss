@@ -1,0 +1,52 @@
+.presentation-kakao{
+  z-index: 1200;
+  position: absolute;
+  .wrapper-modal{
+    position: fixed; left: 0; top: 0;
+    display: flex; justify-content: center; align-items: center;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.71);
+    .modal-kakao{
+      position: relative;
+      background: #ffeadc;
+      border-radius: 8px;
+      overflow: hidden;
+      animation: fadeIn 400ms ease 0s;
+      .modal-close{
+        z-index: 1000;
+        position: absolute; right: 1vw; top: 0.5vw;
+        font-size: 1.3vw;
+        color: #fff;
+        text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+      }
+      .modal-flex{
+        display: flex; flex-direction: column;
+        padding: 2vw;
+        .modal{
+          background: #fff;
+          iframe{
+            border: none;
+          }
+        }
+        .modal-title{
+          font-size: 2vw;
+          margin-top: 1vw;
+          text-align: center;
+          color: rgba($color: #000, $alpha: 0.9);
+          text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+        }
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

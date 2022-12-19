@@ -1,0 +1,38 @@
+.iphoneFront {
+	$unit: 22vmax;
+  width: $unit;
+  height: 2.02*$unit;
+  background-color: #000;
+  border-radius: calc($unit/6);
+  position: relative;
+  .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc($unit/1.02);
+    height: 2*$unit;
+    border: calc($unit/57) solid #bbb5b3;
+    border-radius: calc($unit/6);
+    box-shadow: 0 0 0 1px #4a4947;
+  }
+  .screen {
+    width: calc($unit/1.07);
+    height: 1.95*$unit;
+    border-radius: calc($unit/8);
+    position: relative; top: calc($unit/24.5);
+    margin-left: calc($unit/24.5);
+    overflow: hidden;
+    .island {
+      position: absolute;
+      top: calc($unit/41);
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 0.3*$unit;
+      height: 0.09*$unit;
+      background-color: #000;
+      border-radius: calc($unit/7);
+    }
+  }
+}

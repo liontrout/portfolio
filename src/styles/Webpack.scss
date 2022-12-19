@@ -1,0 +1,191 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.scene {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transform: translateX(40px) rotateX(-33.5deg) rotateY(45deg);
+}
+.scene .webpack-cube {
+  transform-style: preserve-3d;
+  animation: hoverY 2s infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+.scene .outer-cube {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  animation: flipY 5.2s infinite;
+  display: inline-block;
+}
+.scene .outer-cube .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(141, 214, 249, 0.5);
+  line-height: 100px;
+  border: 1px solid white;
+}
+.scene .outer-cube .face-front {
+  transform: translateZ(60px);
+  border-right-width: 6px;
+  border-bottom-width: 6px;
+  animation: border-front 5.2s infinite;
+}
+.scene .outer-cube .face-back {
+  transform: rotateY(180deg) translateZ(60px);
+  animation: border-back 5.2s infinite;
+}
+.scene .outer-cube .face-top {
+  transform: rotateX(90deg) translateZ(60px);
+  border-top-width: 6px;
+  border-right-width: 6px;
+  animation: border-top 5.2s infinite;
+}
+.scene .outer-cube .face-bottom {
+  transform: rotateX(-90deg) translateZ(60px);
+}
+.scene .outer-cube .face-left {
+  transform: rotateY(-90deg) translateZ(60px);
+  border-left-width: 6px;
+  border-bottom-width: 6px;
+  animation: border-left 5.2s infinite;
+}
+.scene .outer-cube .face-right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+.scene .inner-cube {
+  display: inline-block;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 0;
+  top: -2px;
+  transform-style: preserve-3d;
+  animation: flipY-innerCube 5.2s infinite;
+}
+.scene .inner-cube .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #1D78C1;
+  line-height: 100px;
+  border: 2px solid white;
+}
+.scene .inner-cube .face-front {
+  transform: translateZ(60px);
+}
+.scene .inner-cube .face-back {
+  transform: rotateY(180deg) translateZ(60px);
+}
+.scene .inner-cube .face-top {
+  transform: rotateX(90deg) translateZ(60px);
+}
+.scene .inner-cube .face-bottom {
+  transform: rotateX(-90deg) translateZ(60px);
+}
+.scene .inner-cube .face-left {
+  transform: rotateY(-90deg) translateZ(60px);
+}
+.scene .inner-cube .face-right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+@keyframes flipY {
+  0% {
+    transform: translateX(-50%) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  20.25% {
+    transform: translateX(-50%) scale3d(1, 1, 1) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  }
+  100% {
+    transform: translateX(-50%) scale3d(1, 1, 1) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  }
+}
+@keyframes flipY-innerCube {
+  0% {
+    transform: translateX(-50%) scale3d(0.5, 0.5, 0.5) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  20.25% {
+    transform: translateX(-50%) scale3d(0.5, 0.5, 0.5) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  }
+  100% {
+    transform: translateX(-50%) scale3d(0.5, 0.5, 0.5) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  }
+}
+@keyframes border-front {
+  0% {
+    border-width: 1px 6px 6px 1px;
+  }
+  2.25% {
+    border-width: 1px 6px 6px 1px;
+  }
+  5.75% {
+    border-width: 1px 1px 1px 1px;
+  }
+  100% {
+    border-width: 1px 1px 1px 1px;
+  }
+}
+@keyframes border-back {
+  0% {
+    border-width: 1px 1px 1px 1px;
+  }
+  2.25% {
+    border-width: 1px 1px 1px 1px;
+  }
+  5.75% {
+    border-width: 1px 1px 6px 6px;
+  }
+  100% {
+    border-width: 1px 1px 6px 6px;
+  }
+}
+@keyframes border-top {
+  0% {
+    border-width: 6px 6px 1px 1px;
+  }
+  2.25% {
+    border-width: 6px 6px 1px 1px;
+  }
+  5.75% {
+    border-width: 1px 6px 6px 1px;
+  }
+  100% {
+    border-width: 1px 6px 6px 1px;
+  }
+}
+@keyframes border-left {
+  0% {
+    border-width: 1px 1px 6px 6px;
+  }
+  2.25% {
+    border-width: 1px 1px 6px 6px;
+  }
+  5.75% {
+    border-width: 1px 6px 6px 1px;
+  }
+  100% {
+    border-width: 1px 6px 6px 1px;
+  }
+}
+@keyframes hoverY {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}

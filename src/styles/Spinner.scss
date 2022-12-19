@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'HBIOS-SYS';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.spinner1{
+  z-index: 1000;
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 50vh;
+  background: #ffe0ca;
+  transition: all 500ms;
+  .spinUp{
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;
+    font-size: 2vw; font-family: 'HBIOS-SYS'; font-weight: 700;
+    color: #ffa260;
+    &::after{
+      content: "";
+      animation: dot 1.5s linear 0s 2;
+  }
+    @keyframes dot {
+      25% {
+        content: ".";
+      }
+      50% {
+        content: ". .";
+      }
+      75% {
+        content: ". . .";
+      }
+    }
+  }
+}
+.spinner1.on{
+  z-index: -1;
+  top: -50vh;
+  background: linear-gradient(to top, transparent, #ffe0ca);
+  opacity: 0;
+}
+.spinner2{
+  z-index: 1000;
+  position: absolute; right: 0; bottom: 0;
+  width: 100%; height: 50vh;
+  background: #ffe0ca;
+  transition: all 500ms;
+  .spinDown{
+    position: absolute; left: 50%; transform: translateX(-50%); top: 0;
+    .loadBar{
+      width: 20vw;
+      padding: 0.2vw;
+      border: 0.175vw solid #ffa260;
+      border-radius: 0.45vw;
+      .loadBarInner{
+        height: 0.8vw;
+        background: #ffa260;
+        border-radius: 0.2vw;
+    }
+    }
+    .loadPer{
+      float: right;
+      font-size: 1.1vw; font-family: 'HBIOS-SYS';
+      color: #ffa260;
+    }
+  }
+}
+.spinner2.on{
+  z-index: -1;
+  bottom: -50vh;
+  background: linear-gradient(to bottom, transparent, #ffe0ca);
+  opacity: 0;
+}

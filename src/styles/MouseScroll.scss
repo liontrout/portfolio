@@ -1,0 +1,30 @@
+.scroll-downs {
+  position: fixed; right: 3vw; bottom: 3vw;
+  // margin: auto;
+  width : 2.5vw;
+  height: 3.5vw;
+  .mousey {
+    width: 0.2vw;
+    padding: 0.5vw 0.75vw;
+    height: 2vw;
+    border: 0.125vw solid #000;
+    border-radius: 1.5vw;
+    opacity: 0.75;
+    box-sizing: content-box;
+    .scroller {
+      width: 0.2vw;
+      height: 0.5vw;
+      border-radius: 25%;
+      background-color: #000;
+      animation-name: scroll;
+      animation-duration: 2.2s;
+      animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+      animation-iteration-count: infinite;
+    }
+    @keyframes scroll {
+      0% { opacity: 0; }
+      10% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(0.8vw); opacity: 0;}
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.profileId{
+  .profileBox{
+    display: flex;
+    .profileImg{
+      flex: 30%;
+      height: 30vw;
+      background: rgba($color: #fff, $alpha: 0.8) url("https://avatars.githubusercontent.com/u/107461514?v=4") no-repeat 0 35%;
+      background-size: contain;
+      border-radius: 1vw;
+      margin-right: 3vw;
+    }
+    dl{
+      flex: 70%;
+      dd.skills{
+        ul{
+          li{
+            position: relative;
+            display: inline-block;
+            padding: 0 1vw 0 1.55vw;
+            &::after{
+              content: "";
+              position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+              width: 1.3vw; height: 1.3vw;
+            }
+            &:nth-of-type(1)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968267.png);
+              background-size: contain;
+            }
+            &:nth-of-type(2)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968242.png);
+              background-size: contain;
+            }
+            &:nth-of-type(3)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968292.png);
+              background-size: contain;
+            }
+            &:nth-of-type(4)::after{
+              background: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) no-repeat;
+              background-size: contain;
+            }
+            &:nth-of-type(5)::after{
+              background: url(https://avatars.githubusercontent.com/u/32372333?s=200&v=4);
+              background-size: contain;
+            }
+            &:nth-of-type(6)::after{
+              background: url(https://img.icons8.com/color/512/google-firebase-console.png);
+              background-size: contain;
+            }
+            &:nth-of-type(7)::after{
+              background: url(https://img.icons8.com/color/512/sass.png);
+              background-size: contain;
+            }
+            &:nth-of-type(8)::after{
+              background: url(https://avatars.githubusercontent.com/u/20658825?s=200&v=4) no-repeat;
+              background-size: contain;
+            }
+            &:nth-of-type(9)::after{
+              background: url(https://img.icons8.com/color/512/git.png);
+              background-size: contain;
+            }
+            &:nth-of-type(10)::after{
+              background: url(../../public/images/GitHub-Mark-64px.png);
+              background-size: contain;
+            }
+          }
+        }
+      }
+      dd.etc{
+        ul{
+          li{
+            position: relative;
+            display: inline-block;
+            padding: 0 1vw 0 1.55vw;
+            &::after{
+              content: "";
+              position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+              width: 1.3vw; height: 1.3vw;
+            }
+            &:nth-of-type(1)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968705.png);
+              background-size: contain;
+            }
+            &:nth-of-type(2)::after{
+              background: url(https://img.icons8.com/fluency-systems-regular/512/notion.png) no-repeat;
+              background-size: contain;
+            }
+            &:nth-of-type(3)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968520.png) no-repeat;
+              background-size: contain;
+            }
+            &:nth-of-type(4)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968472.png);
+              background-size: contain;
+            }
+            &:nth-of-type(5)::after{
+              background: url(https://cdn-icons-png.flaticon.com/512/5968/5968514.png);
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

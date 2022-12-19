@@ -1,0 +1,100 @@
+.macbook {
+  $unit: 70vmax;
+  .display {
+    background-color: #000;
+    overflow: hidden;
+    width: $unit;
+    height: calc($unit/1.54);
+    margin: auto;
+    border-top-right-radius: calc($unit/33);
+    border-top-left-radius: calc($unit/33);
+    position: relative;
+    &:before {
+      content: "";
+      width: calc($unit/9);
+      height: calc($unit/50);
+      background: #000;
+      position: absolute;
+      top: calc($unit/120);
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-bottom-left-radius: calc($unit/120);
+      border-bottom-right-radius: calc($unit/120);
+      z-index: 999;
+    }
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: calc($unit/2) solid rgba(255, 255, 255, 0.18);
+      border-left: calc($unit/3) solid transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 150;
+    }
+    .screen {
+      z-index: 100;
+      top: 1.5%;
+      left: 1%;
+      border-top-right-radius: calc($unit/45);
+      border-top-left-radius: calc($unit/45);
+      width: 98%;
+      height: 96%;
+      margin: auto;
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+  .base {
+    height: calc($unit/45);
+    width: 1.23*$unit;
+    background-color: #eff0f4;
+    position: relative;
+    &:after,
+    &:before {
+      width: calc($unit/13);
+      height: 100%;
+      content: "";
+      top: 0;
+      right: 0;
+      position: absolute;
+      background: linear-gradient(
+        to right,
+        rgba(226, 228, 227, 0.35) 0%,
+        rgba(140, 141, 145, 0.35) 51%,
+        rgba(226, 228, 227, 0.35) 99%,
+        rgba(226, 228, 227, 0.35) 100%
+      );
+    }
+    &:before {
+      left: 0;
+    }
+    .indent {
+      height: calc($unit/78);
+      width: calc($unit/5.5);
+      margin: auto;
+      background: linear-gradient(
+        to bottom,
+        rgba(153, 154, 158, 0.75) 30%,
+        rgba(44, 45, 47, 0.6) 90%
+      );
+      border-bottom-right-radius: 8em;
+      border-bottom-left-radius: 8em;
+    }
+  }
+  .bottom {
+    height: calc($unit/100);
+    width: 1.23*$unit;
+    margin: auto;
+    background: linear-gradient(
+      to bottom,
+      rgba(153, 154, 158, 0.75) 30%,
+      rgba(44, 45, 47, 0.6) 90%
+    );
+    border-bottom-right-radius: 8em;
+    border-bottom-left-radius: 8em;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.05), 0 15px 12px rgba(0, 0, 0, 0.05);
+  }
+}

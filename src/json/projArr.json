@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "subject": "기업사이트_웹표준 웹접근성 준수",
+    "heading": "삼성전기",
+    "period": "2022.09 / 2022.12 (페이지 리뉴얼)",
+    "personnel": "Front End 1명 (기여도 100%)",
+    "languages": "HTML, CSS, JavaScript",
+    "contents": "웹 표준, 웹 접근성을 준수한 삼성전기 사이트입니다. 현재 삼성전기 페이지와 비슷하게 구현하였습니다. 메인페이지 및 서브1페이지, 서브2페이지를 제작하여 코딩의 폭을 넓혔습니다.",
+    "link": {
+      "메인페이지": "https://liontrout.github.io/webProject01/index.html",
+      "서브페이지 1": "https://liontrout.github.io/webProject01/sub1.html",
+      "서브페이지 2": "https://liontrout.github.io/webProject01/sub2.html",
+      "GitHub": "https://github.com/liontrout/webProject01",
+      "웹표준 인증": "#"
+    },
+    "image": {
+      "0": "https://i.pinimg.com/originals/20/b0/be/20b0be9714b1963cccdd9718099ef804.jpg",
+      "1": "https://i.pinimg.com/originals/22/70/2e/22702e8d2963e850b9dbee55a150297e.jpg",
+      "2": "https://i.pinimg.com/originals/12/15/31/1215311e266d908cd3b88132b333bb0d.jpg"
+    },
+    "inspect": {
+      "HTML 웹표준": "https://i.pinimg.com/originals/f0/0c/a0/f00ca0a550c2199ec0907481afe49a3a.jpg",
+      "CSS 웹표준": "https://i.pinimg.com/originals/76/cf/c0/76cfc0aef4e622588c66f581c8d226e4.jpg",
+      "웹접근성 인증": "https://i.pinimg.com/originals/96/96/50/969650933758350627a075ce3cce1607.jpg"
+    },
+    "viewport": 113
+  },
+  {
+    "id": 2,
+    "subject": "기업사이트_반응형 웹 1",
+    "heading": "CJ ONE",
+    "period": "2022.09 / 2022.12 (페이지 리뉴얼)",
+    "personnel": "Front End 1명 (기여도 100%)",
+    "languages": "HTML, CSS, JavaScript",
+    "contents": "CJ ONE을 클론코딩한 페이지입니다. 현재 CJ ONE 페이지와 비슷하게 구현하였고 웹 표준, 웹 접근성을 준수한 사이트입니다. 또한 반응형으로 제작하여 화면 해상도에 따라 페이지 레이아웃이 변경됩니다.",
+    "link": {
+      "메인페이지": "https://liontrout.github.io/webProject02/",
+      "GitHub": "https://github.com/liontrout/webProject02",
+      "웹표준 인증": "#"
+    },
+    "image": {
+      "0": "https://i.pinimg.com/originals/11/07/f3/1107f3db721bad1db521d301af1a52aa.jpg",
+      "1": "https://i.pinimg.com/originals/05/a0/fa/05a0fa1d5ca153bbae3aacb43cef10bf.jpg",
+      "2": "https://i.pinimg.com/originals/57/78/96/577896276f7cbaa714761fa7a519cb89.jpg"
+    },
+    "inspect": {
+      "HTML 웹표준": "https://i.pinimg.com/originals/3f/4f/9a/3f4f9a1d1f140a3ea76d92218d38c80d.jpg",
+      "CSS 웹표준": "https://i.pinimg.com/originals/e6/d5/b8/e6d5b8434c18c5edc625777d9364ae43.jpg",
+      "웹접근성 인증": "https://i.pinimg.com/originals/36/bf/60/36bf60cd7a0594b17ba226f38c2c9500.jpg"
+    },
+    "viewport": 166
+  },
+  {
+    "id": 3,
+    "subject": "기업사이트_반응형 웹 2",
+    "heading": "삼성전자서비스",
+    "period": "2022.09 / 2022.12 (페이지 리뉴얼)",
+    "personnel": "Front End 1명 (기여도 100%)",
+    "languages": "HTML, CSS, JavaScript",
+    "contents": "삼성전자서비스를 클론코딩한 페이지입니다. 현재 삼성전자서비스 페이지와 비슷하게 구현하였고 웹 표준, 웹 접근성을 준수한 사이트입니다. sprite 이미지를 이용하여 데이터 낭비를 줄였습니다. 또한 반응형으로 제작하여 화면 해상도에 따라 페이지 레이아웃이 변경됩니다. 메인페이지 및 서브1페이지, 서브2페이지를 제작하였습니다.",
+    "link": {
+      "메인페이지": "https://liontrout.github.io/webProject03/index.html",
+      "서브페이지 1": "https://liontrout.github.io/webProject03/sub1.html",
+      "서브페이지 2": "https://liontrout.github.io/webProject03/sub2.html",
+      "GitHub": "https://github.com/liontrout/webProject03",
+      "웹표준 인증": "#"
+    },
+    "image": {
+      "0": "https://i.pinimg.com/originals/98/f7/e5/98f7e5c027a8936bada7470e419550ca.jpg",
+      "1": "https://i.pinimg.com/originals/59/8d/0d/598d0dea2ac6d2ab0eff63a367a6f2cd.jpg"
+    },
+    "inspect": {
+      "HTML 웹표준": "https://i.pinimg.com/originals/97/13/e6/9713e6dbea920d638c95f2230c7b9180.jpg",
+      "CSS 웹표준": "https://i.pinimg.com/originals/07/b1/8d/07b18d82c259486021e8702edee2d775.jpg",
+      "웹접근성 인증": "https://i.pinimg.com/originals/eb/7b/39/eb7b39e05e70c781750e2cacd4620cf7.jpg"
+    },
+    "viewport": 222
+  },
+  {
+    "id": 4,
+    "subject": "React App 1",
+    "heading": "Kakao",
+    "period": "2022.10 ~ 2022.10 ",
+    "personnel": "Front End 1명 (기여도 100%)",
+    "languages": "HTML, CSS, JavaScript, React.js, Axios, Firebase, SASS",
+    "contents": "Firebase 기반으로 회원가입과 로그인 기능을 구현하였습니다. 계정을 통해 프로필 사진, 프로필 이름을 바꿀 수 있게 구현하였고, 이러한 데이터를 바탕으로 friends, more 탭에 표시되도록 구현하였습니다. 채팅창에 텍스트를 입력할 시에 마이크 버튼이 보내기 버튼으로 바뀌도록 구현하였고, 이미지를 업로드할 시에 미리보기 구현 및 텍스트 입력 비활성화로 기존 카카오톡 앱의 기능과 유사하게 구현하고자 하였습니다.",
+    "link": {
+      "메인페이지": "https://liontrout.github.io/kakao_app_2022_firebase/",
+      "GitHub": "https://github.com/liontrout/kakao_app_2022_firebase",
+      "blind": "#"
+    },
+    "image": {
+      "0": "https://media4.giphy.com/media/03f6O4ruqAf97Ar18D/giphy.gif"
+    },
+    "viewport": 285.5
+  },
+  {
+    "id": 5,
+    "subject": "React App 2",
+    "heading": "Netflix",
+    "period": "2022.10 ~ 2022.10 ",
+    "personnel": "Front End 1명 (기여도 100%)",
+    "languages": "HTML, CSS, JavaScript, React.js, Axios, Firebase, Styled-Components",
+    "contents": "Firebase 기반으로 회원가입과 로그인 기능을 구현하였습니다. axios 통신으로 영화의 데이터를 불러왔습니다. play 버튼을 눌렀을 때 영상 데이터가 없을 시에 홈으로 리다이렉트하는 기능을 추가하였습니다. 검색어 입력 후 엔터키를 누르면 검색어와 관련된 영화 결과가 나오게 구현하였습니다.",
+    "link": {
+      "메인페이지": "https://liontrout.github.io/netflix_app_2022/",
+      "GitHub": "https://github.com/liontrout/netflix_app_2022",
+      "blind": "#"
+    },
+    "image": {
+      "0": "https://media3.giphy.com/media/NjYU2qHomHZD848oYR/giphy.gif?cid=790b7611378c9dbd659416104269619f5132c4db9b303434&rid=giphy.gif&ct=g"
+    },
+    "viewport": 355
+  }
+]

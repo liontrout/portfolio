@@ -1,0 +1,40 @@
+.home{
+  z-index: 1;
+  .home__inner{
+    position: relative;
+    height: 40vw;
+    padding: 0;
+    background: none;
+    margin-top: 8.5vw;
+    .home__topic{
+      position: absolute; top: 50%; transform: translateY(-50%);
+      p{
+        font-size: 4vw;
+        .home__title{
+          padding-right: 0.5vw;
+          animation: typeCursor 1s ease-in-out 0s infinite;
+        }
+        @keyframes typeCursor {
+          0% {
+            border-right: none;
+          }
+          100% {
+            border-right: 0.15vw solid #000;
+          }
+        }
+        &:last-of-type{
+          color: #fb9759;
+        }
+      }
+      .webpack{
+        display: flex; justify-content: flex-end; align-items: center;
+        span{
+          text-align: right;
+        }
+        .webpackInner{
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+}
