@@ -17,7 +17,7 @@ function Profile() {
             <ul>
               <li>HTML</li>
               <li>CSS</li>
-              <li>JavaScript</li>
+              <li>JavaScript(ES6)</li>
               <li>React.js</li>
               <li>Axios</li>
               <li>Firebase</li>
