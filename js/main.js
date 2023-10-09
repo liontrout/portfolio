@@ -115,21 +115,17 @@ const raining = (data) => {
   }, 2000);
 };
 
-fetch('../assets/json/data.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Response Error');
-    } else {
-      return response.json();
-    }
-  })
-  .then(json => {
+async function fetchData() {
+  try {
+    const response = await fetch('../assets/json/data.json');
+    const jsonData = await response.json();
+
     const profileSkills = document.querySelectorAll('#profile-description li');
     const projectSkills = document.querySelectorAll('.used-skills > li');
-    const keys = Object.keys(json);
+    const keys = Object.keys(jsonData);
     
     setInterval(() => {
-      raining(json);
+      raining(jsonData);
     }, 20);
 
 
@@ -138,16 +134,17 @@ fetch('../assets/json/data.json')
         const text = skill.textContent.toLowerCase();
 
         if (text.includes(item)) {
-          skill.style.backgroundImage = `url(${json[item]})`;
+          skill.style.backgroundImage = `url(${jsonData[item]})`;
         }
       });
     };
     keys.forEach(item => loopFunc(item, profileSkills));
     keys.forEach(item => loopFunc(item, projectSkills));
-  })
-  .catch(error => {
-    console.error(error);
-  });
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchData();
 
 
 const createImg = (projectName) => {
