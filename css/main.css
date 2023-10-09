@@ -1,0 +1,571 @@
+/* menu */
+#menu {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--menu-bg-color);
+  padding: 0 24px;
+}
+
+#github span {
+  display: block;
+}
+
+#github-logo {
+  position: relative;
+  height: 20px;
+  aspect-ratio: 5/2;
+  background: url("../assets/image/GitHub_Logo.png") no-repeat center / contain;
+  filter: invert(1);
+}
+
+  #github-logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: url("../assets/image/GitHub-Mark-64px.png") no-repeat center / contain;
+    opacity: 0;
+    transition: left 500ms, opacity 500ms;
+  }
+
+    #github:hover #github-logo::after {
+      left: 100%;
+      opacity: 1;
+    }
+
+#menu-lists {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#menu-lists > li {
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+  #menu-lists > li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--menu-line-color);
+    transition: width 500ms;
+  }
+
+    #menu-lists > li.on::after {
+      width: 100%;
+    }
+
+#project-lists {
+  display: none;
+}
+
+#mode {
+  width: auto;
+  height: auto;
+}
+/* //menu */
+
+/* common */
+#container {
+  position: relative;
+  max-width: 1920px;
+  min-width: 1366px;
+  /* min-height: 720px; */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#container::before, #container::after {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  min-height: 50%;
+  background-color: var(--section-bg-color);
+  border-radius: 40px;
+  border-top-left-radius: 10px;
+  padding: 48px;
+  /* backdrop-filter: blur(1px); */
+  visibility: hidden;
+}
+
+  .section.on {
+    visibility: visible;
+  }
+
+.section * {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+  .section.on * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.section h2 {
+  position: absolute;
+  left: 0;
+  top: -1.5rem;
+  font-size: 3rem;
+}
+
+.section-description {
+  flex: 70%;
+}
+
+.section-description > h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-description > h3 > i {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.section-description > h3 > i > span {
+  position: relative;
+  display: none;
+  font-family: 'Pretendard';
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  margin-left: 16px;
+  padding: 6px 8px;
+}
+
+  .section-description > h3 > i > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    border-right: 8px solid var(--bg-color);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }
+
+  .section-description > h3 > i:hover > span {
+    display: inline-block;
+  }
+
+  .section-description > h3 > i > span > a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .section-description > h3 > i > span > a::after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: left 500ms;
+  }
+
+    .section-description > h3 > i > span > a:hover::after {
+      left: 0;
+    }
+
+.section-description > h4 {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.section-description > dl {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 32px;
+}
+
+.section-description > dl > dt {
+  flex: 20%;
+  color: var(--point-font-color);
+}
+
+.section-description > dl > dd {
+  flex: 80%;
+  margin-bottom: 20px;
+}
+
+.section-description > dl > dd:last-child {
+  margin-bottom: 0;
+}
+
+.section-description > dl > dd :is(li, p) {
+  margin-bottom: 10px;
+}
+
+.section-image {
+  flex: 30%;
+}
+
+.ipad-wrapper {
+  position: relative;
+  width: 350px;
+  aspect-ratio: 16/10.05;
+  margin: auto;
+  border: 2px solid #aaa;
+  border-radius: 22px;
+}
+
+  .ipad-wrapper::before, .ipad-wrapper::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #ccc;
+  }
+  .ipad-wrapper::before {
+    left: 30px;
+  }
+  .ipad-wrapper::after {
+    left: 50px;
+  }
+
+.ipad {
+  position: relative;
+  width: 100%;
+  border: 10px solid #252525;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+  .ipad::after {
+    content: "";
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10000px;
+    transform: translateX(-50%);
+}
+
+.ipad-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  transition: left 500ms;
+}
+
+  .ipad-image.active {
+    transition: unset !important;
+  }
+
+.ipad-image .img {
+  display: inline-block;
+  background: no-repeat center top / contain;
+}
+/* //common */
+
+/* main */
+#main {
+  align-items: stretch;
+  background-color: unset;
+  /* backdrop-filter: unset; */
+  padding: unset;
+}
+
+#main-title > p {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+#main-title > #typing-title {
+  display: inline-block;
+  padding-right: 5px;
+  animation: typingCursor 1000ms ease-in-out infinite;
+}
+
+  @keyframes typingCursor {
+    from {
+      border-right: none;
+    }
+    to {
+      border-right: 2px solid #fff;
+    }
+  }
+
+#main-title > #portfolio-title {
+  color: var(--point-font-color);
+}
+
+#cloud-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-reflect: below -1px linear-gradient(transparent, transparent, transparent, transparent, #000500);
+  
+}
+
+#cloud-inner {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 100px;
+  filter: drop-shadow(0 0 35px #fff);
+}
+
+#cloud-inner::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: -50px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 90px 0 0 30px #fff;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  aspect-ratio: 1/1;
+  background: no-repeat center / contain;
+  transform-origin: bottom;
+  animation: raining 2000ms linear forwards;
+}
+
+  @keyframes raining {
+    0% {
+      transform: translateY(0) scale(0);
+    }
+    70% {
+      transform: translateY(100%) scale(1);
+    }
+    100% {
+      transform: translateY(100%) scale(0);
+    }
+  }
+/* //main */
+
+/* profile */
+#profile {
+  flex-direction: row-reverse;
+}
+
+#profile-description {
+  margin-left: 40px;
+}
+
+#profile-description li {
+  background: no-repeat left center / contain;
+  padding: 0 20px 0 30px;
+}
+
+#profile-image {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+#profile-image > div {
+  background: #fff no-repeat center / 50%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  transition-delay: 0ms !important;
+}
+
+#profile-image > #github-image {
+  position: relative;
+  background-image: url("https://avatars.githubusercontent.com/u/107461514?v=4");
+  animation: tickle 5000ms linear infinite;
+}
+
+  @keyframes tickle {
+    0% {
+      transform: rotateY(0);
+    }
+    50% {
+      transform: rotateY(0);
+    }
+    60% {
+      transform: rotateY(45deg);
+    }
+    70% {
+      transform: rotateY(0);
+    }
+    80% {
+      transform: rotateY(45deg);
+    }
+    90% {
+      transform: rotateY(0);
+    }
+    100% {
+      transform: rotateY(0);
+    }
+  }
+
+#profile-image > #photo-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("https://avatars.githubusercontent.com/u/107461514?v=4");
+  transform: rotateY(180deg);
+}
+
+  #profile-image:hover > #github-image {
+    transform: rotateY(180deg);
+    /* animation: unset; */
+  }
+
+  #profile-image:hover > #photo-image {
+    transform: rotateY(0);
+  }
+/* //profile */
+
+/* project */
+:is(#itfin, #ods) .used-skills > li {
+  background: no-repeat left center / contain;
+  padding: 0 20px 0 30px;
+}
+
+:is(#itfin, #ods) .performed-lists {
+  display: block;
+}
+
+:is(#itfin, #ods) .performed-lists > li {
+  position: relative;
+}
+
+  :is(#itfin, #ods) .performed-lists > li::after {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: var(--section-list-color);
+    border-radius: 50%;
+  }
+/* //project */
+
+/* contact */
+#contact dl {
+  font-size: 1.75rem;
+  line-height: 2.5;
+}
+/* //contact */
+
+/* footer */
+#footer {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.icon-view {
+  width: auto;
+  height: auto;
+}
+
+.icon-view > div {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#key-arrow-icon {
+  width: auto;
+  height: auto;
+}
+
+.fa-square-caret-up {
+  display: block !important;
+  text-align: center;
+}
+
+.fa-bounce {
+  animation-duration: 1500ms;
+}
+
+#mouse-down-icon {
+  width: auto;
+  height: 10px;
+  /* padding: 15% 15% 25%; */
+  padding: 10px 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  box-sizing: content-box;
+}
+
+#scroller {
+  width: 3px;
+  height: 50%;
+  background-color: #fff;
+  animation: scrolling 2200ms cubic-bezier(0.15, 0.41, 0.69, 0.94) infinite;
+}
+
+  @keyframes scrolling {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    10% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+/* //footer */

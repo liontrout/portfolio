@@ -1,0 +1,142 @@
+#loading {
+  z-index: 10000;
+  position: absolute;
+  font-family: 'HBIOS-SYS';
+  color: var(--font-color);
+  overflow: hidden;
+}
+
+  #loading.on {
+    z-index: unset;
+  }
+
+.loading-section {
+  position: absolute;
+  left: 0;
+  height: 50%;
+  background-color: var(--menu-bg-color);
+  transition: top 750ms, bottom 750ms;
+}
+
+.loading-section:first-of-type {
+  top: 0;
+}
+.loading-section:last-of-type {
+  bottom: 0;
+}
+
+  .loading-section:first-of-type.on {
+    top: -50%;
+  }
+  .loading-section:last-of-type.on {
+    bottom: -50%;
+  }
+
+.loading-section > div {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  transition: opacity 1000ms;
+}
+
+  .loading-section > div.on {
+    opacity: 0;
+  }
+
+#loading-top {
+  bottom: 0;
+}
+
+#loading-message {
+  font-size: 1.5rem;
+}
+
+#loading-message::after {
+  content: "";
+  animation: dot 1500ms linear 2;
+}
+
+  @keyframes dot {
+    25% {
+      content: ".";
+    }
+    50% {
+      content: ". .";
+    }
+    75% {
+      content: ". . .";
+    }
+  }
+
+#loading-bottom {
+  top: 0;
+}
+
+#loading-bar {
+  width: 200px;
+  height: 10px;
+  margin: 0 auto;
+  padding: 2px;
+  border: 1px solid var(--point-font-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#loading-gauge {
+  width: 0;
+  height: 100%;
+  background-color: var(--point-font-color);
+  border-radius: 5px;
+}
+
+#loading-number {
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+.loaded-message {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-size: 5rem;
+  font-family: 'Pretendard';
+  font-weight: bold;
+  letter-spacing: 15px;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+#loaded-name {
+  font-size: 6rem;
+}
+
+  .loaded-message.on {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+.loading-section:first-of-type > .loaded-message {
+  bottom: 0;
+  transition-delay: 500ms;
+}
+
+.loading-section:last-of-type > .loaded-message {
+  top: 0;
+  transition-delay: 650ms;
+}
+
+.loading-section:last-of-type > .loaded-message.on {
+  animation: letter-spacing-ani 1000ms 1500ms forwards;
+}
+
+  @keyframes letter-spacing-ani {
+    from {
+      letter-spacing: 15px;
+    }
+    to {
+      letter-spacing: 2px;
+    }
+  }

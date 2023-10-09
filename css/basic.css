@@ -1,0 +1,47 @@
+:root {
+  /* basic color */
+  --bg-color: #1b263b;
+  --font-color: #fff;
+  --point-font-color: #5d7eb6;
+  --menu-bg-color: #121d31;
+  --menu-line-color: #425981;
+  --section-bg-color: rgba(49, 60, 82, 0.7);
+  --section-list-color: #b4d0d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Pretendard';
+}
+
+body {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
+
+div {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+span {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

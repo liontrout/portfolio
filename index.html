@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liontrout's Portfolio</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/107461514?s=96&v=4">
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+  <link href="css/import.css" rel="stylesheet">
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/loading.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9d02ada8a6.js" crossorigin="anonymous"></script>
+  <script src="js/util.js"></script>
+  <script defer src="js/loading.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- loading -->
+  <div id="loading">
+    <div class="loading-section">
+      <div id="loading-top">
+        <span id="loading-message">Please Wait</span>
+      </div>
+      <span class="loaded-message">Hi! I'm</span>
+    </div>
+    <div class="loading-section">
+      <div id="loading-bottom">
+        <div id="loading-bar">
+          <div id="loading-gauge"></div>
+        </div>
+        <span id="loading-number">0%</span>
+      </div>
+      <span class="loaded-message" id="loaded-name">Liontrout</span>
+    </div>
+  </div>
+  <!-- //loading -->
+
+  <!-- menu -->
+  <div id="menu">
+    <h1 id="github">
+      <a href="https://github.com/liontrout" target="_blank">
+        <span id="github-id">@liontrout</span>
+        <span id="github-logo"></span>
+      </a>
+    </h1>
+    <ul id="menu-lists">
+      <li>Home</li>
+      <li>Profile</li>
+      <li>ITFIN</li>
+      <li>ODS</li>
+      <!-- <li>Rest</li> -->
+      <li>Contact</li>
+    </ul>
+    <div id="mode">
+      <span id="dark-mode"></span>
+      <span id="bright-mode"></span>
+    </div>
+  </div>
+  <!-- //menu -->
+
+  <!-- container -->
+  <div id="container">
+    <div class="section" id="main">
+      <div class="section-description" id="main-title">
+        <p>Passionate</p>
+        <p id="typing-title">&lt;</p>
+        <p id="portfolio-title">Liontrout's Portfolio</p>
+      </div>
+      <div class="section-image" id="cloud-container">
+        <div id="cloud-inner"></div>
+      </div>
+    </div>
+    <div class="section" id="profile">
+      <h2>Profile</h2>
+      <div class="section-description" id="profile-description">
+        <dl>
+          <dt>Name</dt>
+          <dd>김문혁</dd>
+          <dt>Main-Skills</dt>
+          <dd>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </dd>
+          <dt>Skills</dt>
+          <dd>
+            <ul>
+              <li>React.js</li>
+              <li>Axios</li>
+              <li>Firebase</li>
+              <li>SCSS</li>
+              <li>Styled-Components</li>
+              <li>Git</li>
+            </ul>
+          </dd>
+          <dt>Etc.</dt>
+          <dd>
+            <ul>
+              <li>Figma</li>
+              <li>Notion</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Lightroom</li>
+            </ul>
+          </dd>
+          <dt>약력</dt>
+          <dd>
+            <p>2022.12 ~ 잇핀 재직 중</p>
+            <p>2022.07 ~ 2022.12 이젠아카데미컴퓨터학원 강남점 UI/UX 웹&앱 디자인 & 프론트엔드(React.js)_B 수료</p>
+            <p>2022.02 강원대학교 정치외교학과 졸업</p>
+          </dd>
+        </dl>
+      </div>
+      <div class="section-image" id="profile-image">
+        <div id="github-image"></div>
+        <div id="photo-image"></div>
+      </div>
+    </div>
+    <div class="section" id="itfin">
+      <div class="section-description">
+        <h3>
+          사내 홈페이지 리뉴얼
+          <i class="fa-solid fa-circle-info">
+            <span><a href="https://it-fin.com/" target="_blank">ITFIN.COM</a></span>
+          </i>
+        </h3>
+        <dl>
+          <dt>개요</dt>
+          <dd>홈페이지 전체 리뉴얼 및 움직임 효과 추가</dd>
+          <dt>작업 기간</dt>
+          <dd>2023.08 ~ 2023.09 (총 6주)</dd>
+          <dt>작업 인원</dt>
+          <dd>Front End 4명, Designer 1명 (기여도 60%)</dd>
+          <dt>사용 스킬</dt>
+          <dd>
+            <ul class="used-skills">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Photoshop</li>
+              <li>Git</li>
+            </ul>
+          </dd>
+          <dt>주요 업무</dt>
+          <dd>
+            <ul class="performed-lists">
+              <li>PL로서 프로젝트 수행</li>
+              <li>공통 함수 제작</li>
+              <li>Menu, Scroll-Top 버튼, Footer 컴포넌트 제작</li>
+              <li>담당 페이지: Loading, Main, Company</li>
+              <li>전체 페이지 수정 및 마무리 작업 수행</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="section-image">
+        <div class="ipad-wrapper">
+          <div class="ipad">
+            <div class="ipad-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="ods">
+      <div class="section-description">
+        <h3>
+          신영증권 ODS
+          <i class="fa-solid fa-circle-question">
+            <span>방문 판매 목적을 위한 하이브리드 앱 개발</span>
+          </i>
+        </h3>
+        <h4>퇴직연금 투자비율변경 운용지시</h4>
+        <dl>
+          <dt>개요</dt>
+          <dd>퇴직연금 파트의 투자비율변경 운용지시 화면 개발 및 테스트</dd>
+          <dt>작업 기간</dt>
+          <dd>2023.04 ~ 2023.07 (총 3개월)</dd>
+          <dt>작업 인원</dt>
+          <dd>Front End 1명 (기여도 100%)</dd>
+          <dt>사용 스킬</dt>
+          <dd>
+            <ul class="used-skills">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+            </ul>
+          </dd>
+          <dt>주요 업무</dt>
+          <dd>
+            <ul class="performed-lists">
+              <li></li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <div class="section-image">
+        <div class="ipad-wrapper">
+          <div class="ipad">
+            <div class="ipad-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="section" id="rest-project">
+      <div class="section-description">
+        <ul>
+          <li>Kakao</li>
+          <li>Netflix</li>
+        </ul>
+      </div>
+      <div class="section-image"></div>
+    </div> -->
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="section-description">
+        <dl>
+          <dt>Name</dt>
+          <dd>김문혁</dd>
+          <dt>Phone</dt>
+          <dd>(+82) 010-3692-5010</dd>
+          <dt>E-mail</dt>
+          <dd>rlaansgur95@naver.com</dd>
+          <dt>Channel</dt>
+          <dd>Github</dd>
+        </dl>
+      </div>
+      <div class="section-image"></div>
+    </div>
+  </div>
+  <!-- //container -->
+
+  <!-- footer -->
+  <div id="footer">
+    <div class="icon-view">
+      <div id="key-arrow-icon">
+        <i class="fa-solid fa-square-caret-up fa-bounce"></i>
+        <i class="fa-solid fa-square-caret-left"></i>
+        <i class="fa-solid fa-square-caret-down fa-bounce"></i>
+        <i class="fa-solid fa-square-caret-right"></i>
+      </div>
+      <div id="mouse-down-icon">
+        <div id="scroller"></div>
+      </div>
+    </div>
+    <div class="icon-view">
+      <div id="scroll-up-icon"></div>
+    </div>
+  </div>
+  <!-- //footer -->
+</body>
+</html>
