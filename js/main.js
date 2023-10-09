@@ -117,7 +117,15 @@ const raining = (data) => {
 
 async function fetchData() {
   try {
-    const response = await fetch('/assets/json/data.json');
+    const response = await fetch(
+      '../assets/json/data.json',
+      {
+        headers: {
+          Accept: "application / json"
+        },
+        method: "GET"
+      },
+    );
     const jsonData = await response.json();
 
     const profileSkills = document.querySelectorAll('#profile-description li');
@@ -141,7 +149,7 @@ async function fetchData() {
     keys.forEach(item => loopFunc(item, profileSkills));
     keys.forEach(item => loopFunc(item, projectSkills));
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 fetchData();
