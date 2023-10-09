@@ -117,7 +117,7 @@ const raining = (data) => {
 
 async function fetchData() {
   try {
-    const response = await fetch('../assets/json/data.json');
+    const response = await fetch('/assets/json/data.json');
     const jsonData = await response.json();
 
     const profileSkills = document.querySelectorAll('#profile-description li');
