@@ -118,7 +118,7 @@ const raining = (data) => {
 async function fetchData() {
   try {
     const response = await fetch(
-      '../assets/json/data.json',
+      './assets/json/data.json',
       {
         headers: {
           Accept: "application / json"
@@ -162,7 +162,7 @@ const createImg = (projectName) => {
   projectUrl.forEach((item) => {
     const mockupImg = document.createElement('div');
     mockupImg.classList.add('img');
-    mockupImg.style.backgroundImage = `url('../assets/image/${item}.jpg')`;
+    mockupImg.style.backgroundImage = `url('./assets/image/${item}.jpg')`;
     projectIpad.appendChild(mockupImg);
   });
 
