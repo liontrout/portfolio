@@ -1,4 +1,3 @@
-let loadingPercent = 0;
 const loading = document.getElementById('loading');
 const loadingTop = document.getElementById('loading-top');
 const loadingBottom = document.getElementById('loading-bottom');
@@ -6,6 +5,7 @@ const loadingSection = document.getElementsByClassName('loading-section');
 const loadingGauge = document.getElementById('loading-gauge');
 const loadingNumber = document.getElementById('loading-number');
 const loadedMessage = document.getElementsByClassName('loaded-message');
+let loadingPercent = 0;
 
 const spinner = () => {
   loadingTop.classList.add('on');

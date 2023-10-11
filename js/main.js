@@ -1,11 +1,15 @@
 setTimeout(() => {
   const sections = document.getElementsByClassName('section');
-  const typingTitle = document.getElementById('typing-title');
   const menuLists = document.querySelectorAll('#menu-lists > li');
 
+
+  // 초기 설정
   sections[0].classList.add('on');
   menuLists[0].classList.add('on');
 
+
+  // 타이핑 효과
+  const typingTitle = document.getElementById('typing-title');
   const landingTitle = '<h1>Front End</h1>';
   let titleNum = 0;
   let typingInterval = setInterval(() => {
@@ -17,6 +21,7 @@ setTimeout(() => {
   }, 300);
 
 
+  // 섹션 전환 효과 함수
   let sectionNum = 0;
   const stepFunc = (isActive) => {
     sections[sectionNum].querySelectorAll('*').forEach((item) => {
@@ -74,7 +79,7 @@ setTimeout(() => {
     }
   });
 
-  // 메뉴 클릭 이벤트
+  // 메뉴 클릭 시 섹션 전환 이벤트
   menuLists.forEach((item, index) => {
     item.addEventListener('click', e => {
       stepFunc(false);
@@ -92,6 +97,7 @@ setTimeout(() => {
 const randomIcon = (data) => {
   const iconArr = Object.values(data);
   const source = iconArr[Math.floor(Math.random() * iconArr.length)];
+  
   return source;
 };
 
@@ -115,6 +121,8 @@ const raining = (data) => {
   }, 2000);
 };
 
+
+// 로컬 JSON fetch
 async function fetchData() {
   try {
     const response = await fetch(
@@ -124,7 +132,7 @@ async function fetchData() {
           Accept: "application / json"
         },
         method: "GET"
-      },
+      }
     );
     const jsonData = await response.json();
 
@@ -155,6 +163,7 @@ async function fetchData() {
 fetchData();
 
 
+// 아이패드 목업 이미지 생성
 const createImg = (projectName) => {
   const projectIpad = document.querySelector(`#${projectName} .ipad-image`);
 
@@ -183,6 +192,7 @@ createImg('itfin');
 createImg('ods');
 
 
+// 테마 아이콘 클릭 이벤트
 const mode = document.getElementById('mode');
 mode.addEventListener('click', () => {
   html.classList.toggle('light');
@@ -190,6 +200,6 @@ mode.addEventListener('click', () => {
   if (html.className === 'light') {
     localStorage.setItem('theme', 'light');
   } else {
-    localStorage.setItem('theme', 'dark');
+    localStorage.removeItem('theme');
   }
 });
