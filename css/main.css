@@ -311,6 +311,12 @@
   display: inline-block;
   background: no-repeat center top / contain;
 }
+
+.section-notice {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
 /* //common */
 
 /* main */
