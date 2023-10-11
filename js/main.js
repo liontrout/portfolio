@@ -184,7 +184,12 @@ createImg('ods');
 
 
 const mode = document.getElementById('mode');
-mode.addEventListener('click', e => {
-  console.log(e)
+mode.addEventListener('click', () => {
   html.classList.toggle('light');
+
+  if (html.className === 'light') {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
 });
