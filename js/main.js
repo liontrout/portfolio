@@ -181,3 +181,10 @@ const createImg = (projectName) => {
 
 createImg('itfin');
 createImg('ods');
+
+
+const mode = document.getElementById('mode');
+mode.addEventListener('click', e => {
+  console.log(e)
+  html.classList.toggle('light');
+});
