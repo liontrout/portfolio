@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  word-break: keep-all;
   transition: background-color 500ms;
 }
 
