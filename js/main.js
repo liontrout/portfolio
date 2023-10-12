@@ -1,6 +1,11 @@
 setTimeout(() => {
   const sections = document.getElementsByClassName('section');
-  const menuLists = document.querySelectorAll('#menu-lists > li');
+  const menu = document.querySelectorAll('#menu-lists li');
+  const menuProjects = document.getElementById('menu-projects');
+  const projectLists = document.querySelectorAll('#menu-projects li');
+  const menuLists = [...menu].filter(item => {
+    return item !== menuProjects;
+  });
 
 
   // 초기 설정
@@ -24,11 +29,21 @@ setTimeout(() => {
   // 섹션 전환 효과 함수
   let sectionNum = 0;
   const stepFunc = (isActive) => {
-    sections[sectionNum].querySelectorAll('*').forEach((item) => {
+    sections[sectionNum].querySelectorAll('*').forEach(item => {
       item.style.transitionDelay = isActive ? `${Math.floor(Math.random() * 2000)}ms` : '0ms';
     });
     sections[sectionNum].classList[isActive ? 'add' : 'remove']('on');
     menuLists[sectionNum].classList[isActive ? 'add' : 'remove']('on');
+
+    // 프로젝트 섹션에 진입했을 때
+    const isProject = [...projectLists].some(item => {
+      return item.className === 'on';
+    });
+    if (isProject) {
+      menuProjects.classList.add('on');
+    } else {
+      menuProjects.classList.remove('on');
+    }
   };
 
   const sectionStep = (isDown) => {
@@ -89,6 +104,18 @@ setTimeout(() => {
         stepFunc(true);
       }
     });
+  });
+
+  // 프로젝트 메뉴 클릭 시 ITFIN 섹션으로 이동
+  menuProjects.addEventListener('click', e => {
+    const targetText = e.target.innerText;
+
+    if (targetText.includes('Projects')) {
+      stepFunc(false);
+
+      sectionNum = 2;
+      stepFunc(true);
+    }
   });
 }, 5500);
 
