@@ -275,12 +275,12 @@
 }
 
 .section-description > dl > dt {
-  flex: 20%;
+  flex: 15%;
   color: var(--point-font-color);
 }
 
 .section-description > dl > dd {
-  flex: 80%;
+  flex: 85%;
   margin-bottom: 20px;
 }
 
@@ -565,12 +565,32 @@
     background-color: var(--section-list-color);
     border-radius: 50%;
   }
+
+#kakao > .section-description {
+  flex: 80%;
+}
+
+#kakao > .section-image {
+  flex: 20%;
+}
+
+#kakao .ipad-wrapper {
+  aspect-ratio: 10/16;
+}
 /* //project */
 
 /* contact */
 #contact dl {
   font-size: 1.75rem;
   line-height: 2.5;
+}
+
+#contact dl > dt {
+  flex: 30%;
+}
+
+#contact dl > dd {
+  flex: 70%;
 }
 /* //contact */
 
