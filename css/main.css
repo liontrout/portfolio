@@ -586,11 +586,11 @@
 }
 
 #contact dl > dt {
-  flex: 30%;
+  flex: 20%;
 }
 
 #contact dl > dd {
-  flex: 70%;
+  flex: 80%;
 }
 /* //contact */
 
