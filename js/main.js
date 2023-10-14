@@ -150,7 +150,7 @@ const raining = (data) => {
 
 
 // 로컬 JSON fetch
-async function fetchData() {
+(async function fetchData() {
   try {
     const response = await fetch(
       './assets/json/data.json',
@@ -186,8 +186,7 @@ async function fetchData() {
   } catch (error) {
     console.error(error);
   }
-}
-fetchData();
+})();
 
 
 // 아이패드 목업 이미지 생성
