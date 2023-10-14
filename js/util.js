@@ -21,19 +21,25 @@ const debounce = (func, delay) => {
 // 로컬 이미지 url
 const assetUrl = {
   itfin: [
-    'itfin01',
-    'itfin02',
-    'itfin03',
-    'itfin04',
-    'itfin05',
-    'itfin06'
+    'itfin01.jpg',
+    'itfin02.jpg',
+    'itfin03.jpg',
+    'itfin04.jpg',
+    'itfin05.jpg',
+    'itfin06.jpg'
   ],
   ods: [
-    'pension01',
-    'pension02',
-    'pension03',
-    'pension04',
-    'pension05',
-    'pension06'
+    'pension01.jpg',
+    'pension02.jpg',
+    'pension03.jpg',
+    'pension04.jpg',
+    'pension05.jpg',
+    'pension06.jpg'
+  ],
+  netflix: [
+    'netflix01.gif'
+  ],
+  kakao: [
+    'kakao01.gif'
   ]
 };

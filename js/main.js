@@ -65,7 +65,6 @@ setTimeout(() => {
         sectionStep(false);
       }
     }
-    console.log(sectionNum)
   }, 300));
 
   let touchStartY = 0;
@@ -83,11 +82,14 @@ setTimeout(() => {
   });
 
   addEventListener('keydown', e => {
-    if (e.key === 'ArrowDown') {
+    const down = ['ArrowDown', 'KeyJ', 'KeyS'];
+    const up = ['ArrowUp', 'KeyK', 'KeyW'];
+
+    if (down.includes(e.code)) {
       if (sectionNum < sections.length-1) {
         sectionStep(true);
       }
-    } else if (e.key === 'ArrowUp') {
+    } else if (up.includes(e.code)) {
       if (sectionNum > 0) {
         sectionStep(false);
       }
@@ -191,15 +193,24 @@ const raining = (data) => {
 
 // 아이패드 목업 이미지 생성
 const createImg = (projectName) => {
+  if (!assetUrl[projectName].length) return false;
+
   const projectIpad = document.querySelector(`#${projectName} .ipad-image`);
 
+  let isGif = false;
   const projectUrl = [...assetUrl[projectName], assetUrl[projectName][0]];
   projectUrl.forEach((item) => {
     const mockupImg = document.createElement('div');
     mockupImg.classList.add('img');
-    mockupImg.style.backgroundImage = `url('./assets/image/${item}.jpg')`;
+    mockupImg.style.backgroundImage = `url('./assets/image/${item}')`;
     projectIpad.appendChild(mockupImg);
+
+    if (item.includes('.gif')) {
+      isGif = true;
+    }
   });
+
+  if (isGif) return false;
 
   let leftNum = 0;
   const intervalFunc = () => {
@@ -214,8 +225,9 @@ const createImg = (projectName) => {
   setInterval(() => intervalFunc(), 5000);
 };
 
-createImg('itfin');
-createImg('ods');
+Object.keys(assetUrl).forEach(item => {
+  createImg(item);
+});
 
 
 // 테마 아이콘 클릭 이벤트
