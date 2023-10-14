@@ -566,17 +566,25 @@
     border-radius: 50%;
   }
 
+#netflix .ipad-wrapper {
+  aspect-ratio: 16/9;
+}
+
 #kakao > .section-description {
-  flex: 80%;
+  flex: 85%;
 }
 
 #kakao > .section-image {
-  flex: 20%;
+  flex: 15%;
 }
 
 #kakao .ipad-wrapper {
-  aspect-ratio: 10/16;
+  aspect-ratio: 9/19;
 }
+
+  #kakao .ipad-wrapper:active {
+    transform: scale(1.2);
+  }
 /* //project */
 
 /* contact */
