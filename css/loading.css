@@ -51,6 +51,7 @@
 
 #loading-message {
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 #loading-message::after {
@@ -140,3 +141,29 @@
       letter-spacing: 2px;
     }
   }
+
+
+/* responsive */
+@media screen and (max-width: 500px) {
+  .loaded-message {
+    font-size: 9vw;
+    letter-spacing: 2.5vw;
+  }
+  
+  #loaded-name {
+    font-size: 10vw;
+  }
+
+  .loading-section:last-of-type > .loaded-message.on {
+    animation-name: letter-spacing-res-ani;
+  }
+
+    @keyframes letter-spacing-res-ani {
+      from {
+        letter-spacing: 2.5vw;
+      }
+      to {
+        letter-spacing: 1vw;
+      }
+    }
+}

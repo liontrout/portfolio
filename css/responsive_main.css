@@ -1,0 +1,220 @@
+@media screen and (max-width: 500px) {
+  /* menu */
+  #menu {
+    height: 40px;
+    padding: 0 2vw;
+  }
+
+  #github-id {
+    font-size: 0.75rem;
+  }
+
+  #github-logo {
+    height: 15px;
+  }
+
+  #menu-lists {
+    width: 225px;
+    font-size: 0.8rem;
+  }
+
+  #menu-lists li {
+    padding-bottom: 3px;
+  }
+
+  #menu-projects::before {
+    left: calc(100% + 6px);
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid var(--font-color);
+    border-bottom: 2px solid var(--font-color);
+  }
+
+  #menu-projects > ul {
+    width: 200px;
+  }
+  /* //menu */
+
+  /* common */
+  #container {
+    max-width: unset;
+    min-width: unset;
+    min-height: unset;
+  }
+
+  .section {
+    /* width: 90%; */
+    flex-direction: column;
+    font-size: 1vw;
+    border-radius: 7vw;
+    border-top-left-radius: 2vw;
+    padding: 5vw;
+  }
+
+  .section h2 {
+    top: -3vw;
+    font-size: 6vw;
+  }
+
+  .section-description {
+    margin-bottom: 5vw;
+  }
+
+  .section-description > h3 {
+    font-size: 5vw;
+    white-space: nowrap;
+  }
+
+  .section-description > h3 > i {
+    font-size: 4vw;
+  }
+
+  .section-description > h3 > i > span {
+    font-size: 2.5vw;
+    border-radius: 1.25vw;
+    margin-left: 3vw;
+    padding: 0.75vw 1.5vw;
+  }
+
+  .section-description > h4 {
+    font-size: 4vw;
+    margin-top: 2vw;
+  }
+
+  .section-description > dl {
+    font-size: 1.5vw;
+    margin-top: 5vw;
+  }
+
+  .section-description > dl > dt {
+    flex: 20%;
+  }
+
+  .section-description > dl > dd {
+    flex: 80%;
+    margin-bottom: 3vw;
+  }
+
+  .section-description > dl > dd :is(li, p) {
+    margin-bottom: 1.5vw;
+  }
+
+  .ipad-wrapper {
+    width: 90%;
+    transform-origin: center bottom;
+  }
+
+    .ipad-wrapper:active {
+      transform: scale(1.25);
+    }
+  
+  .section-notice {
+    margin-top: 1vw;
+  }
+  /* //common */
+
+  /* main */
+  #main {
+    height: 250px;
+  }
+
+  #main-title {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%) !important;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+  }
+
+  #main-title > p {
+    font-size: 1.25rem;
+    color: #000;
+  }
+
+  #main-title > #typing-title {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.5vw;
+    animation: unset;
+  }
+
+    #main-title > #typing-title::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0.25vw;
+      height: 100%;
+      background-color: #000;
+      animation: typingCursorRes 1000ms steps(2) infinite;
+    }
+
+    @keyframes typingCursorRes {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  /* //main */
+
+  /* profile */
+  #profile {
+    flex-direction: column-reverse;
+  }
+
+  #profile-description {
+    margin-left: unset;
+  }
+
+  #profile-description li {
+    padding: 0 3vw 0 2.5vw;
+  }
+
+  #profile-image {
+    width: 70%;
+  }
+  /* //profile */
+
+  /* project */
+  .used-skills > li {
+    padding: 0 3vw 0 2.5vw;
+  }
+
+    .performed-lists > li::after {
+      left: -0.75rem;
+      width: 1vw;
+      height: 1vw;
+    }
+  
+  #kakao .ipad-wrapper {
+    width: 40%;
+  }
+
+    #kakao .ipad-wrapper:active {
+      transform: scale(1.5);
+    }
+  /* //project */
+
+  /* contact */
+  #contact dl {
+    font-size: 3vw;
+  }
+
+  .clipboard {
+    vertical-align: middle;
+    transform: scale(0.8) !important;
+  }
+  /* //contact */
+
+  /* footer */
+  #footer {
+    right: 20px;
+    bottom: 0;
+  }
+  /* //footer */
+}

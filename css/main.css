@@ -628,7 +628,7 @@
   cursor: pointer;
   transform: scale(1.25) !important;
   transform-origin: left center;
-  transition: background 0.2s ease;
+  transition: background 200ms;
   transition-delay: unset !important;
 }
 
@@ -639,7 +639,7 @@
   transform: translate(-50%, -50%) !important;
   overflow: visible;
   opacity: 0.9 !important;
-  transition: opacity 0.2s ease;
+  transition: opacity 200ms;
   transition-delay: unset !important;
 }
 
@@ -727,7 +727,7 @@
 #footer {
   position: absolute;
   right: 40px;
-  bottom: 40px;
+  bottom: 20px;
   display: inline-block;
   width: auto;
   height: auto;
