@@ -1,3 +1,7 @@
+addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
 setTimeout(() => {
   const sections = document.getElementsByClassName('section');
   const menu = document.querySelectorAll('#menu-lists li');
@@ -73,12 +77,12 @@ setTimeout(() => {
   });
   addEventListener('touchend', e => {
     const touchEndY = e.changedTouches[0].clientY;
-
-    if (touchEndY - touchStartY < 0) {
+    
+    if (touchEndY - touchStartY < -50) {
       if (sectionNum < sections.length-1) {
         sectionStep(true);
       }
-    } else if (touchEndY - touchStartY > 0) {
+    } else if (touchEndY - touchStartY > 50) {
       if (sectionNum > 0) {
         sectionStep(false);
       }
