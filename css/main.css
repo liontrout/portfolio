@@ -17,6 +17,10 @@
   display: block;
 }
 
+#github-id {
+  font-weight: bold;
+}
+
 #github-logo {
   position: relative;
   height: 20px;
