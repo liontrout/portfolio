@@ -74,10 +74,14 @@ setTimeout(() => {
   addEventListener('touchend', e => {
     const touchEndY = e.changedTouches[0].clientY;
 
-    if (touchEndY - touchStartY > 0) {
-      console.log('--');
-    } else {
-      console.log('++');
+    if (touchEndY - touchStartY < 0) {
+      if (sectionNum < sections.length-1) {
+        sectionStep(true);
+      }
+    } else if (touchEndY - touchStartY > 0) {
+      if (sectionNum > 0) {
+        sectionStep(false);
+      }
     }
   });
 
