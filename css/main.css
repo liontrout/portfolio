@@ -470,6 +470,14 @@
   margin-left: 40px;
 }
 
+#profile-description > dl > dt {
+  flex: 20%;
+}
+
+#profile-description > dl > dd {
+  flex: 80%;
+}
+
 #profile-description li {
   background: no-repeat left center / contain;
   padding: 0 20px 0 30px;
@@ -571,20 +579,24 @@
 }
 
 #kakao > .section-description {
-  flex: 85%;
+  flex: 80%;
 }
 
 #kakao > .section-image {
-  flex: 15%;
+  flex: 20%;
 }
 
 #kakao .ipad-wrapper {
-  aspect-ratio: 9/19;
+  aspect-ratio: 9/16;
 }
 
   #kakao .ipad-wrapper:active {
     transform: scale(1.2);
   }
+
+#kakao .ipad-wrapper .img {
+  background-size: 100% 100%;
+}
 /* //project */
 
 /* contact */
