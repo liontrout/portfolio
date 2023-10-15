@@ -142,7 +142,7 @@
   position: relative;
   max-width: 1920px;
   min-width: 1280px;
-  /* min-height: 720px; */
+  min-height: 840px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -413,7 +413,7 @@
   width: 350px;
   height: 250px;
   padding-top: 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--alpha);
   -webkit-box-reflect: below -1px linear-gradient(transparent, transparent, transparent, transparent, #000500);
 }
 
@@ -612,6 +612,115 @@
 #contact dl > dd {
   flex: 80%;
 }
+
+#contact-phone::before {
+  content: "(+82) ";
+}
+
+.clipboard {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 6px;
+  vertical-align: text-top;
+  cursor: pointer;
+  transform: scale(1.25) !important;
+  transform-origin: left center;
+  transition: background 0.2s ease;
+  transition-delay: unset !important;
+}
+
+.clipboard svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) !important;
+  overflow: visible;
+  opacity: 0.9 !important;
+  transition: opacity 0.2s ease;
+  transition-delay: unset !important;
+}
+
+.clipboard svg path {
+  stroke-width: 1.5;
+  stroke: var(--font-color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.clipboard svg path.page {
+  transform-origin: center;
+}
+
+.clipboard svg path.check {
+  transform-origin: center;
+  stroke-dasharray: 8;
+  stroke-dashoffset: 8;
+  stroke: var(--section-list-color);
+}
+
+.clipboard:hover {
+  background-color: var(--alpha);
+}
+
+.clipboard:hover svg {
+  opacity: 1 !important;
+}
+
+.clipboard.copied svg path.page {
+  animation: copiedPage 2000ms ease forwards;
+}
+
+.clipboard.copied svg path.check {
+  stroke-dasharray: 16;
+  transition: all 500ms;
+  transition-delay: unset !important;
+  animation: copiedPage 2000ms ease forwards;
+}
+
+  @keyframes copiedPage {
+    0% {
+      transform: rotate(0) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(0) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(10deg) translateY(16px);
+      opacity: 0;
+    }
+  }
+
+#contact-github {
+  position: relative;
+}
+
+  #contact-github::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--font-color);
+    transition: width 500ms;
+  }
+
+    #contact-github:hover::after {
+      width: 100%;
+    }
+
+.fa-arrow-right {
+  transition-delay: unset !important;
+}
+
+  #contact-github:hover .fa-arrow-right {
+    transform: rotate(-45deg) !important;
+  }
 /* //contact */
 
 /* footer */

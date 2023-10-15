@@ -264,3 +264,28 @@ modal.addEventListener('click', e => {
     modalSection.classList.remove('on');
   }
 });
+
+
+// 클립보드 클릭 이벤트
+const clipboard = document.querySelectorAll('.clipboard');
+const clipHandler = (e) => {
+  const currentTarget = e.currentTarget;
+  const currentText = currentTarget.parentElement.innerText.trim();
+
+  (async function copy(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      
+      currentTarget.classList.add('copied');
+      setTimeout(() => {
+        currentTarget.classList.remove('copied');
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+    }
+  })(currentText);
+};
+
+clipboard.forEach(item => {
+  item.addEventListener('click', e => clipHandler(e));
+});

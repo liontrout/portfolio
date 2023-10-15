@@ -20,6 +20,7 @@ html {
   --section-bg-color: rgba(49, 60, 82, 0.7);
   --section-list-color: #b4d0d9;
   --invert: 1;
+  --alpha: rgba(255, 255, 255, 0.1);
 }
 
 html.light {
@@ -32,6 +33,7 @@ html.light {
   --section-bg-color: rgba(255, 244, 237, 0.7);
   --section-list-color: #ffb283;
   --invert: 0;
+  --alpha: rgba(0, 0, 0, 0.1);
 }
 
 body {
