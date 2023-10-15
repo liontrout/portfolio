@@ -34,7 +34,8 @@ const assetUrl = {
     'pension03.jpg',
     'pension04.jpg',
     'pension05.jpg',
-    'pension06.jpg'
+    'pension06.jpg',
+    'pension07.jpg'
   ],
   netflix: [
     'netflix01.gif'
