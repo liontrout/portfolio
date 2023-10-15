@@ -241,3 +241,26 @@ mode.addEventListener('click', () => {
     localStorage.removeItem('theme');
   }
 });
+
+
+// 카카오 모달 이벤트
+const kakaoButton = document.getElementById('kakao-button');
+const modal = document.getElementById('modal');
+const modalSection = document.querySelector('.modal-section');
+
+kakaoButton.addEventListener('click', e => {
+  e.preventDefault();
+  modal.classList.add('on');
+  setTimeout(() => {
+    modalSection.classList.add('on');
+  }, 0);
+});
+
+modal.addEventListener('click', e => {
+  if (e.target.id === 'modal' || e.target.className === 'modal-close') {
+    setTimeout(() => {
+      modal.classList.remove('on');
+    }, 500);
+    modalSection.classList.remove('on');
+  }
+});
