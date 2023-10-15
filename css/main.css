@@ -742,6 +742,13 @@
   height: auto;
 }
 
+#footer > .icon-view:first-child {
+  display: block;
+}
+#footer > .icon-view:last-child {
+  display: none;
+}
+
 .icon-view > div {
   display: inline-block;
   margin-left: 10px;
@@ -789,6 +796,43 @@
     }
     100% {
       transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+#touch-up-icon {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--font-color);
+  border-radius: 8px;
+  opacity: 0.75;
+}
+
+#touch-circle {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--font-color);
+  border-radius: 50%;
+  animation: touch-ani 2500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+  @keyframes touch-ani {
+    0% {
+      top: 75%;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      top: 25%;
+    }
+    100% {
+      top: 25%;
       opacity: 0;
     }
   }
