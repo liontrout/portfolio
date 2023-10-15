@@ -33,6 +33,10 @@
   #menu-projects > ul {
     width: 200px;
   }
+
+  #menu-projects > ul > li {
+    line-height: 1.5;
+  }
   /* //menu */
 
   /* common */
@@ -45,7 +49,7 @@
   .section {
     /* width: 90%; */
     flex-direction: column;
-    font-size: 1vw;
+    font-size: 2vw;
     border-radius: 7vw;
     border-top-left-radius: 2vw;
     padding: 5vw;
@@ -82,7 +86,7 @@
   }
 
   .section-description > dl {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     margin-top: 5vw;
   }
 
@@ -172,7 +176,7 @@
   }
 
   #profile-description li {
-    padding: 0 3vw 0 2.5vw;
+    padding: 0 2vw 0 3vw;
   }
 
   #profile-image {
@@ -182,7 +186,7 @@
 
   /* project */
   .used-skills > li {
-    padding: 0 3vw 0 2.5vw;
+    padding: 0 2vw 0 3vw;
   }
 
     .performed-lists > li::after {
