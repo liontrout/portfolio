@@ -1,21 +1,21 @@
 @media screen and (max-width: 500px) {
   /* menu */
   #menu {
-    height: 40px;
-    padding: 0 2vw;
+    height: 36px;
+    padding: 0 0 0 6px;
   }
 
   #github-id {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
   }
 
   #github-logo {
-    height: 15px;
+    height: 12px;
   }
 
   #menu-lists {
     width: 225px;
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* 0.7 */
   }
 
   #menu-lists li {
@@ -35,7 +35,7 @@
   }
 
   #menu-projects > ul > li {
-    line-height: 1.5;
+    line-height: 1.25;
   }
   /* //menu */
 
@@ -81,7 +81,7 @@
   }
 
   .section-description > h4 {
-    font-size: 4vw;
+    font-size: 3.5vw;
     margin-top: 2vw;
   }
 
@@ -113,7 +113,7 @@
     }
   
   .section-notice {
-    margin-top: 1vw;
+    margin-top: 2vw;
   }
   /* //common */
 
@@ -190,7 +190,7 @@
   }
 
     .performed-lists > li::after {
-      left: -0.75rem;
+      left: -2vw;
       width: 1vw;
       height: 1vw;
     }
@@ -206,7 +206,7 @@
 
   /* contact */
   #contact dl {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   .clipboard {
@@ -228,4 +228,8 @@
     display: block;
   }
   /* //footer */
+
+  /* modal */
+  
+  /* //modal */
 }
