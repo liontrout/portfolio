@@ -56,6 +56,8 @@ setTimeout(() => {
 
   // 섹션 이동 함수 by using wheel, touch, keydown event
   addEventListener('mousewheel', debounce(e => {
+    if (isModal) return;
+
     if (e.wheelDeltaY < 0) {
       if (sectionNum < sections.length-1) {
         sectionStep(true);
@@ -72,6 +74,8 @@ setTimeout(() => {
     touchStartY = e.touches[0].clientY;
   });
   addEventListener('touchend', e => {
+    if (isModal) return;
+
     const touchEndY = e.changedTouches[0].clientY;
     
     if (touchEndY - touchStartY < -50) {
@@ -86,6 +90,8 @@ setTimeout(() => {
   });
 
   addEventListener('keydown', e => {
+    if (isModal) return;
+    
     const down = ['ArrowDown', 'KeyJ', 'KeyS'];
     const up = ['ArrowUp', 'KeyK', 'KeyW'];
 
@@ -251,6 +257,7 @@ mode.addEventListener('click', () => {
 const kakaoButton = document.getElementById('kakao-button');
 const modal = document.getElementById('modal');
 const modalSection = document.querySelector('.modal-section');
+let isModal = false;
 
 kakaoButton.addEventListener('click', e => {
   if (innerWidth > 500) {
@@ -259,6 +266,7 @@ kakaoButton.addEventListener('click', e => {
     setTimeout(() => {
       modalSection.classList.add('on');
     }, 0);
+    isModal = true;
   }
 });
 
@@ -268,6 +276,7 @@ modal.addEventListener('click', e => {
       modal.classList.remove('on');
     }, 500);
     modalSection.classList.remove('on');
+    isModal = false;
   }
 });
 
