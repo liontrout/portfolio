@@ -1,7 +1,3 @@
-addEventListener('contextmenu', function (e) {
-  e.preventDefault();
-});
-
 setTimeout(() => {
   const sections = document.getElementsByClassName('section');
   const menu = document.querySelectorAll('#menu-lists li');
@@ -257,11 +253,13 @@ const modal = document.getElementById('modal');
 const modalSection = document.querySelector('.modal-section');
 
 kakaoButton.addEventListener('click', e => {
-  e.preventDefault();
-  modal.classList.add('on');
-  setTimeout(() => {
-    modalSection.classList.add('on');
-  }, 0);
+  if (innerWidth > 500) {
+    e.preventDefault();
+    modal.classList.add('on');
+    setTimeout(() => {
+      modalSection.classList.add('on');
+    }, 0);
+  }
 });
 
 modal.addEventListener('click', e => {
